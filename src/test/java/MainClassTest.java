@@ -17,4 +17,10 @@ public class MainClassTest {
     public void testGetClassNumber() {
         assertTrue("Method getClassNumber() returned unexpected value, expected > 45,  but was < 45", MainClass.getClassNumber() > 45);
     }
+
+    @Test
+    public void testGetClassString() {
+        assertTrue("Method getClassString() returned unexpected value, expected to contain 'Hello' or 'hello', but was: " + MainClass.getClassString(),
+                MainClass.getClassString().contains("Hello") || MainClass.getClassString().contains("hello"));
+    }
 }
